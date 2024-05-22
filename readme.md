@@ -1,6 +1,16 @@
-### Neural Architectures for McKean-Vlasov Processes
+### Neural McKean-Vlasov Processes: Distributional Dependence in Diffusion Models
 
-The supplementary material contains the code and the yaml files to replicate the results in the submitted paper. The main implementation of our proposed structure is in MeanFieldMLP.py. The parameter estimation for both real and synthetic dataset, as well as the generative modeling experiments can be run using the command:
+Appears in AISTATS 2024
+
+[Paper Link](https://arxiv.org/abs/2404.09402)
+
+#### Background
+
+We investigate the impact of including distributional dependence in diffusion models for time series analysis and generative modeling. The main inspiration is the transformer architecture which includes dependence on distributions of tokens. We consider generalizations of this architecture described by [McKean-Vlasov processes](https://en.wikipedia.org/wiki/McKean%E2%80%93Vlasov_process). In this work, we propose a series of neural network architectures for parameterizing these stochastic processes and investigate the benefits such parameterizations bring in relevant machine learning tasks. 
+
+#### Code Structure
+
+The supplementary material contains the code and the yaml files to replicate the results in the paper. The main implementation of our proposed structure is in MeanFieldMLP.py. The parameter estimation for both real and synthetic datasets, as well as the generative modeling experiments can be run using the command:
 
 `python train.py -f yaml_filepath -d device -e experiment_folder`
 
@@ -50,4 +60,17 @@ Our GLOW implementation is adapted from https://github.com/ikostrikov/pytorch-fl
 MAF implementation is adapted from https://github.com/ikostrikov/pytorch-flows.        
 WGAN implementation is adapted from https://github.com/eriklindernoren/PyTorch-GAN/tree/master/implementations/wgan_gp.       
 VAE implementation is adapted from https://github.com/AntixK/PyTorch-VAE/tree/master.        
-Score-Based SDE implementation is adapted from the official tutorial: https://colab.research.google.com/drive/120kYYBOVa1i0TD85RjlEkFjaWDxSFUx3?usp=sharing#scrollTo=YyQtV7155Nht.         
+Score-Based SDE implementation is adapted from the official tutorial: https://colab.research.google.com/drive/120kYYBOVa1i0TD85RjlEkFjaWDxSFUx3?usp=sharing#scrollTo=YyQtV7155Nht.  
+
+#### Citation
+If the code was helpful, please use the following citation:
+```
+@inproceedings{yang2024neural,
+  title={Neural McKean-Vlasov Processes: Distributional Dependence in Diffusion Processes},
+  author={Yang, Haoming and Hasan, Ali and Ng, Yuting and Tarokh, Vahid},
+  booktitle={International Conference on Artificial Intelligence and Statistics},
+  pages={262--270},
+  year={2024},
+  organization={PMLR}
+}
+```
