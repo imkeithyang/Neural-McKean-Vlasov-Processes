@@ -3,7 +3,6 @@ from torch import nn
 from torch.autograd import grad
 from torch.nn import functional as F
 
-from nets_fk import SMLP
 import numpy as np
 
 import pytorch_lightning as pl
