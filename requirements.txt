@@ -1,0 +1,7 @@
+dcor==0.6
+numpy==.24.4
+POT==0.9.1
+pytorch_lightning==1.4.4
+scipy==1.5.2
+sympy==.12
+torch==2.3.0+cu121
